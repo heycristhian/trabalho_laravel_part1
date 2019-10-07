@@ -17,11 +17,18 @@ class AlunoControllerResource extends Controller
     }
 
     public function store(Request $request) {
+        
         $aluno = new Aluno;
         $aluno->nome = $request->nome;
         $aluno->disciplina = $request->disciplina;
         $aluno->data_matricula = $request->data_matricula;
         $aluno->nota = $request->nota;
+/*
+        $aluno->nome = request('nome');
+        $aluno->disciplina = request('disciplina');
+        $aluno->data_matricula = request('data_matricula');
+        $aluno->nota = request('nota');*/
+
         $aluno->save();
         return redirect()->route('aluno.index')->with('message', 'Aluno criado com sucesso!');
     }
@@ -40,7 +47,7 @@ class AlunoControllerResource extends Controller
         $aluno->nome = $request->nome;
         $aluno->disciplina = $request->disciplina;
         $aluno->data_matricula = $request->data_matricula;
-        $aluno->nota = $aluno->request;
+        $aluno->nota = $request->nota;
         $aluno->save();
         return redirect()->route('aluno.index')->with('message', 'Aluno alterado com sucesso!');
 

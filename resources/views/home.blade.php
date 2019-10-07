@@ -30,7 +30,11 @@
         <td>{{ $al->data_matricula }}</td>
         <td>{{ $al->nota }}</td>
       <td><a href=" {{ route('aluno.edit', $al->id) }}"><button type="button" class="btn btn-outline-warning">Editar</button></a></td>
-        <td><a href=""><button type="button" class="btn btn-outline-danger">Remover</button></a></td>
+      <form action="{{route('aluno.destroy', $al->id)}}" method="post">
+        {!! method_field('delete') !!}
+        {{ csrf_field() }}
+      <td><button type="submit" class="btn btn-outline-danger">Remover</button></td>
+      </form>
       </tr>
       @endforeach
 

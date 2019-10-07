@@ -23,7 +23,7 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Nota</label>
-                    <input name="nota" type="text" value="{{$aluno->nota}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite a nota do aluno...">
+                    <input name="nota" type="number" step="0.01" value="{{$aluno->nota}}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Digite a nota do aluno...">
                 </div>
                 <button type="submit" class="btn btn-success">Salvar</button>
                 <a href="{{ route('aluno.index') }}">
