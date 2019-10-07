@@ -1,0 +1,16 @@
+.title {
+    position: relative;
+    left: 2px;
+    color: #fff;
+}
+
+.nav-button {
+    padding: 6px;
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    position: absolute;
+    width: 50px
+}
